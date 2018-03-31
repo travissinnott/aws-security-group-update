@@ -1,0 +1,32 @@
+{
+  "name": "aws-security-group-update",
+  "version": "1.0.0",
+  "description": "Automatically update all AWS security groups to allow access when IP address changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha lib/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travissinnott/aws-security-group-update.git"
+  },
+  "keywords": [
+    "aws",
+    "sg",
+    "update",
+    "ip"
+  ],
+  "author": "Travis Sinnott <travis@notable.space>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/travissinnott/aws-security-group-update/issues"
+  },
+  "homepage": "https://github.com/travissinnott/aws-security-group-update#readme",
+  "dependencies": {
+    "aws-sdk": "2.216.1",
+    "bunyan": "1.8.12",
+    "bunyan-format": "0.2.1",
+    "dotenv": "5.0.1",
+    "ipify": "2.0.0"
+  }
+}

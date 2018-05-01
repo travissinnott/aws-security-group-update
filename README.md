@@ -1,5 +1,6 @@
 # aws-security-group-update
-Update security group(s) when IP address changes
+
+Update security group(s) when IP address changes.
 
 
 # Running
@@ -11,7 +12,7 @@ For now:
 
 # Configuration
 
-There are two parts:
+There are three parts:
 
 ## config.json
 
@@ -48,3 +49,23 @@ SG_NOTE_REGEX="LOOK-FOR-THIS-STRING"
 IPIFY="https://api.ipify.org"
 ```
 
+## AWS Credentials File
+
+This project uses the AWS module and leverages the default use of the credentials file.  To configure, use the `aws` command line application for your platform.  Assuming you specify a profile named "work" (as in the `.env` file above):
+
+```
+$ aws configure --profile work
+AWS Access Key ID [None]: AKIAI44QH8DHBEXAMPLE
+AWS Secret Access Key [None]: je7MtGbClwBF/2Zp9Utk/h3yCo8nvbEXAMPLEKEY
+Default region name [None]: us-east-1
+Default output format [None]: json
+```
+
+For details, see https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+
+For Access Key ID and Secret Access Key, be sure to use your IAM credentials and NOT THE MASTER ACCOUNT KEYS!!!!  This can be found in the IAM panel when logged in as your user.  Alternatively create specific credentials just for this app.
+
+
+# TODO
+
+* Create run script under /bin and support command line use when installed globally
